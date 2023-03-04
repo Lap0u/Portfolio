@@ -1,7 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import logo from './logo.svg'
+import './App.css'
+import axios from 'axios'
+
+const BACKURL = "http://localhost:4000"
+
+function App () {
+  axios.get(`${BACKURL}/base`)
+    .then(res => {
+      console.log(res.data)
+    })
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +23,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React (main)
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
