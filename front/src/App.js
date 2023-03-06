@@ -1,5 +1,6 @@
 
-import logo from './logo.svg'
+import pong_thumb from "./assets/thumbnail/pong_thumbnail.jpg"
+import coming_soon from "./assets/thumbnail/coming_soon.jpg"
 import './App.css'
 import axios from 'axios'
 
@@ -13,7 +14,21 @@ function App () {
     })
   return (
     <div className="App">
-      <p>Welcome to my amazing portfolio</p>
+      <h1>Welcome to my amazing portfolio</h1>
+      <div className="thumbnail_grid">
+        <div className="thumbnail_box">
+          <img src={pong_thumb}></img>
+        </div>
+        <div className="thumbnail_box">
+          <img src={coming_soon}></img>
+        </div>
+        <div className="thumbnail_box">
+          <img src={coming_soon}></img>
+        </div>
+        <div className="thumbnail_box">
+          <img src={coming_soon}></img>
+        </div>
+      </div>
     </div>
   )
 }
