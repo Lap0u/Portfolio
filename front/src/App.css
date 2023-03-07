@@ -11,6 +11,6 @@
 .thumbnail_box {
   width: 50%;
   background-color: aqua;
-  border: 2px solid red;
+  border: 3px solid red;
   box-sizing: border-box;
 }
