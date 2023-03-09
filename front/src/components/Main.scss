@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .thumbnail_grid {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +6,6 @@
 
 .thumbnail_box {
   width: 50%;
-  background-color: yellow;
   border: 3px solid red;
   box-sizing: border-box;
 }
