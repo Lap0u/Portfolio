@@ -1,10 +1,12 @@
-import { Hexagon } from "./Hexagon"
+import { Logo } from "./Logo"
+import "./MenuBar.scss"
+import { NavBar } from "./NavBar"
 
 export const MenuBar = () => {
   return (
-    <div>
-      <Hexagon />
-      <div>This is the menu bar</div>
+    <div className="menubar">
+      <Logo />
+      <NavBar />
     </div>
   )
 }

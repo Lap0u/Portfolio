@@ -1,6 +1,6 @@
-import './hexagon.scss'
+import './Logo.scss'
 
-export const Hexagon = () => {
+export const Logo = () => {
   return (
     <div className="wrapper">
       <div className="square">
