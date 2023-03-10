@@ -1,9 +1,15 @@
 @import 'style/colors';
 
+@font-face {
+  font-family: 'Myriad'; /*Can be any text*/
+  src: local('Myriad Bold Condensed'),
+    url('./font/adobe/Myriad Bold Condensed.ttf') format('truetype');
+}
+
 body {
   font-family: $main-font;
   color: $main-text-color;
   text-align: center;
+  justify-content: center;
   background-color: $main-background-color;
 }
-

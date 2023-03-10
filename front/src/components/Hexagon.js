@@ -2,6 +2,10 @@ import './hexagon.scss'
 
 export const Hexagon = () => {
   return (
-    <div className="square">Cb</div>
+    <div className="wrapper">
+      <div className="square">
+        Cb
+      </div>
+    </div>
   )
 }
