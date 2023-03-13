@@ -1,7 +1,14 @@
-.resume {
-  background-color: green;
-}
+@import '../style/colors.scss';
 
 .resume-button {
-  background-color: greenyellow;
+  border: 2px solid $main-text-color;
+  border-radius: 5px;
+  background-color: inherit;
+  color: $main-text-color;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.resume-button:hover {
+  cursor: pointer;
 }

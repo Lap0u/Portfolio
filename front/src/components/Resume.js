@@ -3,7 +3,7 @@ import './Resume.scss'
 export const Resume = () => {
   return (
     <div className="resume">
-      Resume
+      <button className="resume-button">Resume</button>
     </div>
   )
 }
