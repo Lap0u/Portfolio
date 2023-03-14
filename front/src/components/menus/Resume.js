@@ -1,5 +1,5 @@
 import './Resume.scss'
-import resume from '../assets/pdf/CV Clement 2023.pdf'
+import resume from '../../assets/pdf/CV Clement 2023.pdf'
 
 export const Resume = () => {
   return (

@@ -1,27 +1,18 @@
-import pong_thumb from "../assets/thumbnail/pong_thumbnail.jpg"
-import coming_soon from "../assets/thumbnail/coming_soon.jpg"
 import './Main.scss'
-import { MenuBar } from "./MenuBar"
+import { MenuBar } from "./menus/MenuBar"
+import { Home } from "./main_parts/Home"
+import { About } from "./main_parts/About"
+import { Projects } from "./main_parts/Projects"
+import { Contact } from "./main_parts/Contact"
 
 export const Main = () => {
   return (
     <div>
       <MenuBar />
-      <h1>Welcome to my amazing portfolio</h1>
-      <div className="thumbnail_grid">
-        <div className="thumbnail_box">
-          <img src={pong_thumb}></img>
-        </div>
-        <div className="thumbnail_box">
-          <img src={coming_soon}></img>
-        </div>
-        <div className="thumbnail_box">
-          <img src={coming_soon}></img>
-        </div>
-        <div className="thumbnail_box">
-          <img src={coming_soon}></img>
-        </div>
-      </div>
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   )
 }
