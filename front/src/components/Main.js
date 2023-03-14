@@ -9,10 +9,18 @@ export const Main = () => {
   return (
     <div>
       <MenuBar />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <div className="text-box-left">
+        <Home />
+      </div>
+      <div className="text-box-right">
+        <About />
+      </div>
+      <div className="text-box-left">
+        <Projects />
+      </div>
+      <div className="text-box-right">
+        <Contact />
+      </div>
     </div>
   )
 }
