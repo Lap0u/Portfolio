@@ -1,0 +1,24 @@
+@import '../../style/colors.scss';
+
+.navbar {
+  font-size: 13px;
+  line-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+  margin-right: 0.1em;
+}
+
+.navbar-button {
+  width: 5.9rem;
+  
+  a {
+    color: white
+  }
+  
+  a:hover {
+    color: $main-text-color;
+    transition: color 500ms;
+    cursor: pointer;
+  }
+}

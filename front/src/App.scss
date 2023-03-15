@@ -1,0 +1,33 @@
+@import 'style/colors';
+
+@font-face {
+  font-family: 'Myriad'; /*Can be any text*/
+  src: local('Myriad Bold Condensed'),
+    url('./font/adobe/Myriad Bold Condensed.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+  color: $main-text-color;
+  text-align: center;
+  justify-content: center;
+  background-color: $main-background-color;
+  overflow-y: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}

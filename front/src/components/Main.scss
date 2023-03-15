@@ -1,0 +1,27 @@
+.thumbnail_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumbnail_box {
+  width: 50%;
+  border: 3px solid red;
+  box-sizing: border-box;
+}
+
+.text-box-left,
+.text-box-right {
+  font-size: 2.5rem;
+  width: 50%;
+  margin-top: 6em;
+}
+
+.text-box-left {
+  margin-left: 8em;
+}
+
+.text-box-right {
+  margin-right: 8em;
+  margin-left: auto;
+}
