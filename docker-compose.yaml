@@ -1,45 +1,19 @@
-version: "3"
+version: '3.9'
 services:
-    frontend:
-        container_name: frontend
-        build:
-            context: ./front
-            dockerfile: dockerfile
-        image: frontend
-        ports:
-            - "3000:3000"
-        volumes:
-            - ./front:/app
-        networks:
-            - glob
-
-    backend:
-        container_name: backend
-        build:
-            context: ./back
-            dockerfile: dockerfile
-        image: backend
-        ports:
-            - "4000:4000"
-        volumes:
-            - ./back:/app
-        networks:
-            - glob
-
-    postgres:
-        image: postgres:13-alpine
-        ports:
-        - 5432:5432
-        env_file:
-        - .env
-        volumes:
-        - postgres:/var/lib/postgresql/data
-        networks:
-        - glob
+  vite:
+    build: ./my-portfolio/
+    env_file:
+      - .env
+    container_name: vite
+    ports:
+      - 3000:3000
+    volumes:
+      - portfolio:/app/front
 
 volumes:
-   postgres:
-      name: postgres-volume
-
-networks:
-   glob:
+  portfolio:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '$PWD/my-portfolio'
