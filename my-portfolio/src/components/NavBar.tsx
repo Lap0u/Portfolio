@@ -16,10 +16,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="w-full flex justify-center items-center">
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="hover:opacity-90 hover:cursor-pointer font-roboto text-2xl items-self-start text-pastelTeal font-bold absolute top-10 left-10">
+        <div className="hover:opacity-80 hover:cursor-pointer font-roboto text-2xl items-self-start text-pastelTeal font-bold absolute top-10 left-10">
           Clément<span className="text-pastelBlue">__B.</span>
         </div>
         <div className="flex justify-center items-center gap-x-10 mt-10">
