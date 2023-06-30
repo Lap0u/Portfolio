@@ -1,11 +1,10 @@
-import React from 'react';
 import PortfolioItem, { PortFolioProps } from './PortfolioItem';
-import portfolio from '../data/portfolio.js';
+import { projects } from '../data/projects.ts';
 
 const Portfolio = () => {
   return (
     <div>
-      {portfolio.map((project: PortFolioProps) => (
+      {projects.map((project: PortFolioProps) => (
         <PortfolioItem
           img={project.img}
           title={project.title}

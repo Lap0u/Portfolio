@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import Intro from './components/Intro';
-import Portfolio from './components/Portfolio';
-import Timeline from './components/Timeline';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-function App() {
+import BackgroundImage from './components/BackgroundImage';
+import NavBar from './components/NavBar';
+import BigTitle from './components/BigTitle';
+
+const App = () => {
   return (
-    <>
-      <Intro />
-      <Portfolio />
-      <Timeline />
-      <Footer />
-      <Contact />
-    </>
+    <div className="w-screen h-[200vh] bg-gradient-to-b from-darkGradiantBg to-lightGradiantBg">
+      <BackgroundImage />
+      <NavBar />
+      <BigTitle />
+    </div>
   );
-}
+};
 
 export default App;
