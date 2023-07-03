@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   cursor: none;
+  font-family: Poppins;
 }
 
 .radial1 {
@@ -19,7 +20,7 @@
 .cursor-dot {
   width: 15px;
   height: 15px;
-  background-color: teal;
+  background-color: #008080;
 }
 
 .debug {

@@ -1,6 +1,7 @@
 import BackgroundImage from './components/BackgroundImage';
 import NavBar from './components/NavBar';
 import BigTitle from './components/BigTitle';
+import Competences from './components/Competences';
 
 const App = () => {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -26,6 +27,7 @@ const App = () => {
       {/* <BackgroundImage /> */}
       <NavBar />
       <BigTitle />
+      <Competences />
     </div>
   );
 };

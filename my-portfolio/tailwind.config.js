@@ -11,6 +11,7 @@ export default {
       black: '#000',
       pastelTeal: '#D2FBD0',
       'pastelBlue': '#8EC5FC',
+      'teal': '#008080'
 
 
     },

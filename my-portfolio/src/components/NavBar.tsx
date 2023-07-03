@@ -14,8 +14,8 @@ const NavBar = () => {
     isHovered ? 'opacity-40' : 'opacity-100'
   }`;
   return (
-    <div className="w-screen flex justify-center items-center z-1 top-0 radial1 pb-6 sticky">
-      <div className="hover:opacity-80 font-roboto text-2xl text-pastelTeal w-[10vw] font-bold absolute top-10 left-10 z-10 debug">
+    <div className="w-screen flex justify-center items-center z-10 top-0 radial1 pb-6 sticky">
+      <div className="hover:opacity-80 font-roboto text-2xl text-pastelTeal w-[10vw] font-bold absolute top-10 left-10 z-10">
         Clément<span className="text-pastelBlue">__B.</span>
       </div>
       <div className="flex justify-center items-center gap-x-10 mt-10">
