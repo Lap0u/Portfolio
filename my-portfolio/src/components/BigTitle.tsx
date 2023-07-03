@@ -1,6 +1,6 @@
 const BigTitle = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-[90vh] bg-gradient-to-bl from-darkGradiantBg to-lightGradiantBg">
+    <div className="flex flex-col items-center justify-center w-screen h-[90vh] radial2">
       <div className="text-[clamp(6rem_,_8vw_,_10rem)] font-bold text-white">
         CLEMENT BEAURAIN
       </div>

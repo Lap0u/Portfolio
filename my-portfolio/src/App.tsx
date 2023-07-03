@@ -20,9 +20,7 @@ const App = () => {
   };
 
   return (
-    <div
-      className="w-screen bg-gradient-to-r from-darkGradiantBg to-lightGradiantBg relative h-[200vh]"
-      onMouseMove={handleMouseMove}>
+    <div className="w-screen relative h-[200vh]" onMouseMove={handleMouseMove}>
       <div className="cursor-dot"></div>
       <div className="cursor-outline"></div>
       {/* <BackgroundImage /> */}

@@ -8,6 +8,14 @@
   cursor: none;
 }
 
+.radial1 {
+  background: radial-gradient(circle at 40%, #151f2a, #4e342f);
+}
+
+.radial2 {
+  background: radial-gradient(circle at 60%, #4e342f, #151f2a);
+}
+
 .cursor-dot {
   width: 15px;
   height: 15px;
