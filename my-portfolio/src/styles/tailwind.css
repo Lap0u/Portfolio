@@ -3,7 +3,35 @@
 @tailwind utilities;
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: none;
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+  background-color: teal;
+}
+
+.debug {
+  border: 3px solid palevioletred;
+  box-sizing: border-box;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid hsla(0, 0%, 100%, 0.7);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }

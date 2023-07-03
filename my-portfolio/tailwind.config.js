@@ -5,8 +5,8 @@ export default {
   theme: {
     colors: {
       transparent: 'transparent',
-      darkGradiantBg: '#221E21',
-      lightGradiantBg: '#231E21',
+      darkGradiantBg: '#151F2A',
+      lightGradiantBg: '#4E342F',
       white: '#fff',
       black: '#000',
       pastelTeal: '#D2FBD0',

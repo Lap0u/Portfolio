@@ -1,12 +1,12 @@
 const BigTitle = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-[100vh] text-center">
-      <h1 className="text-[clamp(4rem_,_6vw_,_8rem)] font-bold text-white">
+    <div className="flex flex-col items-center justify-center w-screen h-[90vh] bg-gradient-to-bl from-darkGradiantBg to-lightGradiantBg">
+      <div className="text-[clamp(6rem_,_8vw_,_10rem)] font-bold text-white">
         CLEMENT BEAURAIN
-      </h1>
-      <h2 className="text-[clamp(2rem_,_5vw_,_5rem)] font-bold text-white">
-        Fullstack Developer
-      </h2>
+      </div>
+      <div className="text-[clamp(1rem_,_1.5vw_,_1.5rem)] text-white font-roboto">
+        FULLSTACK ㅇ DEVELOPER
+      </div>
     </div>
   );
 };
