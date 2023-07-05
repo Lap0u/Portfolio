@@ -29,7 +29,7 @@ const Competences = () => {
           icon="carbon:machine-learning-model"
           underlined="Machine Learning"
           title="Python, Pandas, Matplotlib, ..."
-          text="Implémentation de modèles de regression linéaire et classification.Analyse et visulation de la donnée. Manipulation de datasets."
+          text="Implémentation de modèles de regression linéaire et regression logistique.Analyse et visulation de la donnée. Manipulation de datasets."
         />
         <img
           src={code}
