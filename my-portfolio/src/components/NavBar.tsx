@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,35 +15,39 @@ const NavBar = () => {
     isHovered ? 'opacity-40' : 'opacity-100'
   }`;
   return (
-    <div className="w-screen flex justify-center items-center z-10 top-0 radial1 pb-6 sticky">
-      <div className="hover:opacity-80 font-roboto text-2xl text-pastelTeal w-[10vw] font-bold absolute top-10 left-10 z-10">
+    <div className="w-screen flex justify-center items-center z-10 top-0 radial1 pb-6 fixed">
+      <div className="hover:opacity-80 font-roboto text-2xl text-pastelTeal w-[10vw] font-bold absolute top-10 left-10">
         Clément<span className="text-pastelBlue">__B.</span>
       </div>
       <div className="flex justify-center items-center gap-x-10 mt-10">
-        <div
+        <Link
+          to="home"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={elemClasses}>
           // home
-        </div>
-        <div
+        </Link>
+        <Link
+          to="competences"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={elemClasses}>
           // compétences
-        </div>
-        <div
+        </Link>
+        <Link
+          to="projets"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={elemClasses}>
           // projets
-        </div>
-        <div
+        </Link>
+        <Link
+          to="contact"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={elemClasses}>
           // contact
-        </div>
+        </Link>
       </div>
     </div>
   );
