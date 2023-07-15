@@ -2,8 +2,11 @@ import NavBar from '../components/NavBar';
 import BigTitle from '../components/BigTitle';
 import Competences from '../components/Competences';
 import Projets from '../components/Projets';
+import { useBreakpoints } from '../hooks/useBreakpoints';
 
 const Main = () => {
+  const { isMobile } = useBreakpoints();
+  console.log(isMobile);
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const cursor = document.querySelector('.cursor-dot') as HTMLDivElement;
     const cursorOutline = document.querySelector(
