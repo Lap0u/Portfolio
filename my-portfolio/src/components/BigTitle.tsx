@@ -27,7 +27,7 @@ const BigTitle = () => {
           <img
             src={clementProfile}
             alt="face"
-            className="z-0 absolute tablet:top-[15vh] left-32 w-[clamp(10rem_,_10vw_,_20rem)] rounded-full"
+            className="z-0 absolute tablet:top-[15vh] left-32 w-[clamp(10rem_,_10vw_,_18rem)] rounded-full"
           />
           <div
             id="home"

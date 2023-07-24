@@ -1,20 +1,22 @@
 import CompetencesCard from './CompetencesCard';
 import CompetencesTitle from './CompetencesTitle';
 import code from '../assets/Code.png';
+import { useOrientation } from '../hooks/useOrientation';
 const colors = ['#DF058D', '#2C49D8', '#FBBF24'];
 
 const Competences = () => {
+  const { isLandscape } = useOrientation();
   return (
-    <div id="competences" className="radial1 w-screen h-[100vh] pt-12">
+    <div id="competences" className="radial1 w-screen min-h-screen py-12">
       <CompetencesTitle />
-      <div className="flex mx-64 border-2 relative border-solid border-white mt-12 h-[40vh]">
+      <div className="flex flex-col justify-center mx-6 w-auto border-2 border-white">
         <CompetencesCard
           underlineColor={colors[0]}
           icon="uil:react"
           underlined="Frontend"
           title="React, Next.js, Tailwind, ..."
           text="Développement d'interfaces web et mobiles responsive et dynamiques. Utilisation de librairies et frameworks modernes. Mobile-first. Design UI/UX. Intégration de maquettes."
-          addedStyle="border-r-2 border-solid border-white"
+          addedStyle="border-b-2 tablet:border-r-2 border-solid border-white"
         />
         <CompetencesCard
           underlineColor={colors[1]}
@@ -22,7 +24,7 @@ const Competences = () => {
           underlined="Backend"
           title="Nest.js, Express.js, Strapi, ..."
           text="Mise en place d'Apis REST. Développement d'architectures backend robustes et sécurisées. Utilisation de bases de données SQL au travers d'un ORM."
-          addedStyle="border-r-2 border-solid border-white"
+          addedStyle="border-b-2 tablet:border-r-2 border-solid border-white"
         />
         <CompetencesCard
           underlineColor={colors[2]}
@@ -31,11 +33,13 @@ const Competences = () => {
           title="Python, Pandas, Matplotlib, ..."
           text="Implémentation de modèles de regression linéaire et regression logistique.Analyse et visulation de la donnée. Manipulation de datasets."
         />
-        <img
-          src={code}
-          alt="code"
-          className="opacity-20 absolute w-[35vw] top-[70%] left-[50%] translate-x-[-50%]"
-        />
+        {isLandscape && (
+          <img
+            src={code}
+            alt="code"
+            className="opacity-20 absolute w-[35vw] top-[70%] left-[50%] translate-x-[-50%]"
+          />
+        )}
       </div>
     </div>
   );
