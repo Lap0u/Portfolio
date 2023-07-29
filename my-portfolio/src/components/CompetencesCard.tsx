@@ -1,5 +1,4 @@
 import { Icon } from '@iconify/react';
-import { useOrientation } from '../hooks/useOrientation';
 
 type CompetencesCardProps = {
   underlineColor: string;
@@ -18,15 +17,14 @@ const CompetencesCard = ({
   text,
   addedStyle,
 }: CompetencesCardProps) => {
-  const { isLandscape } = useOrientation();
   return (
     <div
       className={`basis-1/3 py-4 flex flex-col justify-center items-center text-white tablet:relative ${addedStyle}`}>
-      <div className="flex flex-col text-3xl font-semibold items-center justify-center my-4">
+      <div className="flex flex-col text-3xl font-semibold items-center justify-center my-4 justify-self-start">
         <Icon
           icon={icon}
           style={{ color: underlineColor }}
-          className="text-5xl"
+          className="text-5xl mb-4 justify-self-start"
         />
         <div
           style={{
