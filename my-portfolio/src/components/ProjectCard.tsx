@@ -1,39 +1,59 @@
 import { useBreakpoints } from '../hooks/useBreakpoints';
 import code from '../assets/Code.png';
+import { Icon } from '@iconify/react';
+
+export type IProject = {
+  id: string;
+  attributes: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    stack: Array<'frontend' | 'backend' | 'machine-learning'>;
+    skills: string[];
+  };
+};
 
 type ProjectCardProps = {
-  project: {
-    id: string;
-    attributes: {
-      title: string;
-      description: string;
-      difficulty: string;
-      image: string;
-      link: string;
-    };
-  };
+  project: IProject;
   handleClick: () => void;
 };
 
 const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
-  const isMobile = useBreakpoints();
+  const Icons = {
+    frontend: ['uil:react', 'text-5xl text-[#DF058D]'],
+    backend: ['fa6-brands:node', 'text-5xl text-[#2C49D8]'],
+    'machine-learning': [
+      'carbon:machine-learning-model',
+      'text-5xl text-[#FBBF24]',
+    ],
+  };
+  const { isMobile } = useBreakpoints();
   return (
     <>
       {isMobile ? (
         <div
           onClick={handleClick}
-          className="hover:cursor-pointer flex flex-col justify-center mx-6 gap-y-3">
+          className="hover:cursor-pointer flex flex-col justify-center items-center gap-y-3 w-full">
           <div className="my-4 flex justify-center gap-x-4 items-center">
-            <div className="zfont-semibold text-[clamp(1.5rem_,_2vw_,_2rem)] text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple">
+            <div className="font-semibold text-[clamp(1.5rem_,_2vw_,_2rem)] text-white">
               {project.attributes.title}
             </div>
+          </div>
+          <div className="flex justify-center gap-x-6">
+            {project.attributes.stack.map((stack) => (
+              <Icon
+                className={Icons[stack][1]}
+                key={stack}
+                icon={Icons[stack][0]}
+              />
+            ))}
           </div>
           <img
             className="rounded-2xl"
             src={code}
             alt={project.attributes.title}
-            width={500}
-            height={250}
+            width={'80%'}
           />
           <div>{project.attributes.description}</div>
         </div>
@@ -50,8 +70,8 @@ const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
           </div>
           <div className="flex flex-col justify-start mx-6 pr-64 gap-y-3 basis-3/4">
             <div className="my-1 flex items-center gap-x-10">
-              <div className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan to-purple text-[clamp(3rem_,_4vw_,_4rem)]">
-                {project.attributes.title}
+              <div className="font-medium text-white text-[clamp(3rem_,_4vw_,_4rem)]">
+                {project.attributes.title} hello
               </div>
             </div>
             <div className="text-[clamp(1rem_,_1.5vw_,_1.5rem)]">

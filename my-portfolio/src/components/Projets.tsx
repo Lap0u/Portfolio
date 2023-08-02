@@ -1,16 +1,17 @@
 import { useNavigate } from 'react-router-dom';
-import ProjectCard from './ProjectCard';
+import ProjectCard, { IProject } from './ProjectCard';
 import ProjetsTitle from './ProjetsTitle';
 
-const allProjects = [
+const allProjects: IProject[] = [
   {
     id: '1',
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['frontend'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
   {
@@ -18,9 +19,10 @@ const allProjects = [
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['frontend'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
   {
@@ -28,9 +30,10 @@ const allProjects = [
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['frontend', 'backend'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
   {
@@ -38,9 +41,10 @@ const allProjects = [
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['backend', 'machine-learning'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
   {
@@ -48,9 +52,10 @@ const allProjects = [
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['frontend'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
   {
@@ -58,9 +63,10 @@ const allProjects = [
     attributes: {
       title: 'Portfolio',
       description: 'My portfolio website',
-      difficulty: '1',
       image: 'portfolio.png',
       link: 'link',
+      stack: ['frontend'],
+      skills: ['React', 'TypeScript', 'TailwindCSS'],
     },
   },
 ];
@@ -73,7 +79,7 @@ const Projets = () => {
   return (
     <div id="projets" className="w-full min-h-screen radial2 text-white">
       <ProjetsTitle />
-      <div className="text-white flex flex-col m-16 gap-y-6 lg:gap-y-12">
+      <div className="text-white flex flex-col my-16 gap-y-6 lg:gap-y-12">
         {allProjects.map((project) => (
           <ProjectCard
             key={project.id}
