@@ -10,7 +10,20 @@ export type IProject = {
     image: string;
     link: string;
     stack: Array<'frontend' | 'backend' | 'machine-learning'>;
-    skills: string[];
+    skills: Array<
+      | 'react'
+      | 'typescript'
+      | 'nextjs'
+      | 'tailwindcss'
+      | 'nestjs'
+      | 'strapi'
+      | 'postgresql'
+      | 'docker'
+      | 'python'
+      | 'pandas'
+      | 'numpy'
+      | 'plotly'
+    >;
   };
 };
 
@@ -20,7 +33,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
-  const Icons = {
+  const StackIcons = {
     frontend: ['uil:react', 'text-5xl text-[#DF058D]'],
     backend: ['fa6-brands:node', 'text-5xl text-[#2C49D8]'],
     'machine-learning': [
@@ -28,6 +41,22 @@ const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
       'text-5xl text-[#FBBF24]',
     ],
   };
+
+  const LanguageIcons = {
+    react: 'vscode-icons:file-type-reactjs',
+    typescript: 'vscode-icons:file-type-typescript-official',
+    tailwindcss: 'logos:tailwindcss-icon',
+    nextjs: 'logos:nextjs-icon',
+    nestjs: 'logos:nestjs',
+    strapi: 'logos:strapi',
+    postgresql: 'logos:postgresql',
+    docker: 'logos:docker-icon',
+    python: 'vscode-icons:file-type-python',
+    pandas: 'logos:pandas',
+    numpy: 'logos:numpy',
+    plotly: 'devicon:plotly',
+  };
+
   const { isMobile } = useBreakpoints();
   return (
     <>
@@ -40,14 +69,25 @@ const ProjectCard = ({ project, handleClick }: ProjectCardProps) => {
               {project.attributes.title}
             </div>
           </div>
-          <div className="flex justify-center gap-x-6">
-            {project.attributes.stack.map((stack) => (
-              <Icon
-                className={Icons[stack][1]}
-                key={stack}
-                icon={Icons[stack][0]}
-              />
-            ))}
+          <div className="flex flex-col gap-y-4">
+            <div className="flex justify-center gap-x-6">
+              {project.attributes.stack.map((stack) => (
+                <Icon
+                  className={StackIcons[stack][1]}
+                  key={stack}
+                  icon={StackIcons[stack][0]}
+                />
+              ))}
+            </div>
+            <div className="flex justify-center gap-x-6 shrink">
+              {project.attributes.skills.map((skill) => (
+                <Icon
+                  className="text-2xl"
+                  key={skill}
+                  icon={LanguageIcons[skill]}
+                />
+              ))}
+            </div>
           </div>
           <img
             className="rounded-2xl"

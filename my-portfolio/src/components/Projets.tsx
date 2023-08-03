@@ -6,12 +6,12 @@ const allProjects: IProject[] = [
   {
     id: '1',
     attributes: {
-      title: 'Portfolio',
-      description: 'My portfolio website',
+      title: 'CV Parser',
+      description: 'Une application web pour parser des CVs',
       image: 'portfolio.png',
       link: 'link',
-      stack: ['frontend'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      stack: ['frontend', 'backend'],
+      skills: ['react', 'typescript', 'tailwindcss', 'docker'],
     },
   },
   {
@@ -22,51 +22,62 @@ const allProjects: IProject[] = [
       image: 'portfolio.png',
       link: 'link',
       stack: ['frontend'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      skills: ['react', 'typescript', 'tailwindcss', 'docker'],
     },
   },
   {
     id: '3',
     attributes: {
-      title: 'Portfolio',
-      description: 'My portfolio website',
+      title: 'Lab Interface',
+      description:
+        'Une interface pour faciliter la communication entre les mentors et les laborantins',
       image: 'portfolio.png',
       link: 'link',
       stack: ['frontend', 'backend'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      skills: [
+        'nextjs',
+        'typescript',
+        'tailwindcss',
+        'strapi',
+        'postgresql',
+        'docker',
+      ],
     },
   },
   {
     id: '4',
     attributes: {
-      title: 'Portfolio',
-      description: 'My portfolio website',
+      title: 'Transcendance',
+      description:
+        'Jeu multijoueur en ligne avec fonctionnalités de chat et de matchmaking',
       image: 'portfolio.png',
       link: 'link',
-      stack: ['backend', 'machine-learning'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      stack: ['frontend', 'backend'],
+      skills: ['react', 'typescript', 'nestjs', 'postgresql', 'docker'],
     },
   },
   {
     id: '5',
     attributes: {
-      title: 'Portfolio',
-      description: 'My portfolio website',
+      title: 'Linear Regression',
+      description:
+        "Mise en placee d'une régression linéaire en python from scratch",
       image: 'portfolio.png',
       link: 'link',
-      stack: ['frontend'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      stack: ['machine-learning'],
+      skills: ['python', 'pandas', 'numpy', 'plotly'],
     },
   },
   {
     id: '6',
     attributes: {
-      title: 'Portfolio',
-      description: 'My portfolio website',
+      title: 'DSLR',
+      description:
+        "Mise en place d'une régression logistique et analyse de données en python from scratch",
       image: 'portfolio.png',
       link: 'link',
-      stack: ['frontend'],
-      skills: ['React', 'TypeScript', 'TailwindCSS'],
+      stack: ['machine-learning'],
+      skills: ['python', 'pandas', 'numpy', 'plotly'],
     },
   },
 ];
